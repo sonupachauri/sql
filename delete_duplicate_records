@@ -1,29 +1,30 @@
 -- SQL Query - How to delete duplicates from a table?
-1) Using a Sub-Query 
+-- 1) Using a Sub-Query 
 
-Hints - a) Group by data in the table by FirstName and LastName
-b) Choose only the max EmployeeID from that group. 
-For ex - In case of Adam Owens, there are two records with Employee IDs 1 and 4.
-Our query will choose only the record with EmployeeID = 4
-In case, there is only a single record in the table, the same record will be fetched in the output.
+-- Hints - a) Group by data in the table by FirstName and LastName
+-- b) Choose only the max EmployeeID from that group. 
+-- For ex - In case of Adam Owens, there are two records with Employee IDs 1 and 4.
+-- Our query will choose only the record with EmployeeID = 4
+-- In case, there is only a single record in the table, the same record will be fetched in the output.
 
-SQL Query - 
+-- SQL Query - 
 
-Delete from dbo.Employee
+Delete from Employee
 WHERE EmployeeID NOT IN 
-(Select Max(EmployeeID) from dbo.Employee 
+(Select Max(EmployeeID) from Employee 
 GROUP BY FirstName, LastName);
 
-2) Using CTE
+-- 2) Using CTE
 
-Hints - a) Create a CTE and use the RANK function to order the records for each Employee (First Name and Last Name) by EmployeeID. 
-b) Delete all records from the above CTE for which RANK > 1 (duplicate records)
+-- Hints - a) Create a CTE and use the RANK function to order the records for each Employee (First Name and Last Name) by EmployeeID. 
+-- b) Delete all records from the above CTE for which RANK > 1 (duplicate records)
 
-SQL Query - 
+-- SQL Query - 
+
 With Employee_CTE as 
 (Select * , 
-RANK() OVER (Partition by FirstName, LastName ORDER BY EmployeeID desc ) as Rank
-FROM dbo.Employee)
+RANK() OVER (Partition by FirstName, LastName ORDER BY EmployeeID desc ) as Rank_no
+FROM  Employee)
 
 Delete from Employee_CTE 
-WHERE Rank > 1
+WHERE Rank_no > 1
