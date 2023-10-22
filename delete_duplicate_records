@@ -1,0 +1,10 @@
+
+-- SQL Query - How to delete duplicates from a table?
+-- 1) Using a Sub-Query 
+
+delete from employee where EmployeeID not in(
+select max(EmployeeID) from employee
+group by email)
+
+
+-- 2) Using a Sub-Query 
