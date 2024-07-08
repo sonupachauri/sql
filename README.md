@@ -1,4 +1,4 @@
-### sql practice series (July Month Target)
+### sql practice series (July'24 Month Target)
 https://www.youtube.com/@techTFQ/playlists                                 
 https://www.youtube.com/@ankitbansal6/playlists                              
 https://leetcode.com/studyplan/top-sql-50/
