@@ -1,2 +1,2 @@
-# sql
-sql practice series
+### sql practice series
+https://www.youtube.com/@techTFQ/playlists
