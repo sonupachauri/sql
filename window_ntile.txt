@@ -1,3 +1,5 @@
+https://www.youtube.com/watch?v=90iK6gGvG_g&list=PLavw5C92dz9F66P3GFo5O6nJ4DfZNhVsp&index=3&pp=iAQB
+
 SELECT emp_id, fname, lname, dept_id, 
 GROUP_CONCAT ( strength ) as "strengths" 
 FROM employee 
