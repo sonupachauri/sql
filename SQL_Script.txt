@@ -1,3 +1,8 @@
+SELECT emp_id, fname, lname, dept_id, 
+GROUP_CONCAT ( strength ) as "strengths" 
+FROM employee 
+GROUP BY fname;
+
 -- Dataset
 drop table emp_input;
 create table emp_input
