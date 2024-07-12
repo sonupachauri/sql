@@ -18,3 +18,13 @@ insert into teams values ('KKR', 'Kolkata Knight Riders');
 insert into teams values ('GT', 'Gujarat Titans');
 insert into teams values ('LSG', 'Lucknow Super Giants');
 commit;
+
+
+--SELECT t1.team_code,t2.team_name FROM teams t1
+--JOIN teams t2 on t1.team_name <> t2.team_name
+
+with matches as
+  (SELECT row_number() over (order by team_name) as ID, team_code,team_name from teams t)
+  
+ SELECT m.team_name,o.team_name from matches m 
+ join matches o on m.id < o.id
