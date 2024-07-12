@@ -21,3 +21,8 @@ insert into comments_and_translations values
 (9, 'aabbaabb', 'extraordinary'),
 (10, 'ccddccbb', 'medium');
 commit;
+
+
+SELECT  (case
+         when translation is null then comment else translation 
+      END)  output FROM comments_and_translations
