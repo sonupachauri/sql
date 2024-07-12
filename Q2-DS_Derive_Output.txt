@@ -23,3 +23,18 @@ INSERT INTO target VALUES (4, 'X');
 INSERT INTO target VALUES (5, 'F');
 
 COMMIT;
+
+select s.id, 'Mismatch' as outputs from source s
+JOIN target t on s.id = t.id and s.name <> t.name
+
+UNION
+select s.id, 'New in source' as outputs from source s
+left JOIN target t on s.id = t.id
+where t.id is NULL
+
+UNION
+select t.id, 'New in target' as outputs from source s
+RIGHT JOIN target t on s.id = t.id
+where s.id is NULL
+
+
