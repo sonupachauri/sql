@@ -26,3 +26,6 @@ commit;
 SELECT  (case
          when translation is null then comment else translation 
       END)  output FROM comments_and_translations
+
+   SELECT coalesce(translation,comment) as outputs
+      from comments_and_translations
