@@ -41,3 +41,9 @@ row_number() over (partition by user_name order by user_id) as rn
 from users u
 order by user_id) x
 where x.rn <> 1;
+
+-- Solution 3: Using window function.
+SELECT email FROM users
+GROUP by user_name
+having COUNT(*) > 1
+
