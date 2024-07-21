@@ -17,3 +17,14 @@ sum(case WHEN salary_component_type='bonus' then val end) as bonus ,
 sum(case WHEN salary_component_type='hike_percent' then val end) as hike_percent
 FROM emp_compensation
 group by emp_id
+
+################################################################
+select * from (
+select emp_id, 'salary' as salary_coomponent_type, salary as val from emp_compensation_pivot
+union all
+select emp_id, 'bonus' as salary_coomponent_type, bonus as val from emp_compensation_pivot
+union all 
+select emp_id, 'hike_percent' as salary_coomponent_type, hike_percent as val from emp_compensation_pivot
+) a
+
+order by emp_id
