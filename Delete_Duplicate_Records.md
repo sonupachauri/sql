@@ -5,6 +5,7 @@ https://www.youtube.com/watch?v=h48xzQR3wNQ&list=PLavw5C92dz9F66P3GFo5O6nJ4DfZNh
 
 -- Requirement: Delete duplicate data from cars table. Duplicate record is identified based on the model and brand name.
 
+```sql
 drop table if exists cars;
 create table if not exists cars
 (
@@ -157,3 +158,4 @@ insert into cars
 select distinct * from cars_bkp;
 
 drop table cars_bkp;
+```
