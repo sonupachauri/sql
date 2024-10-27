@@ -1,11 +1,11 @@
-/* ##########################################################################
+```sql ##########################################################################
    <<<<>>>> Scenario 1: Data duplicated based on SOME of the columns <<<<>>>>
 https://www.youtube.com/watch?v=h48xzQR3wNQ&list=PLavw5C92dz9F66P3GFo5O6nJ4DfZNhVsp&index=1&pp=iAQB
    ########################################################################## */
 
 -- Requirement: Delete duplicate data from cars table. Duplicate record is identified based on the model and brand name.
 
-```sql
+
 drop table if exists cars;
 create table if not exists cars
 (
