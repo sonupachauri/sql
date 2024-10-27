@@ -1,4 +1,5 @@
-```sql Write an SQL query to display the correct message (meaningful message) from the input
+```sql
+ Write an SQL query to display the correct message (meaningful message) from the input
 comments_and_translation table. */
 
 drop table comments_and_translations;
