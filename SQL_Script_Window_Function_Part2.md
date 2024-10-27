@@ -1,4 +1,5 @@
--- Script to create the Product table and load data into it.
+```sql
+Script to create the Product table and load data into it.
 
 DROP TABLE product;
 CREATE TABLE product
@@ -135,4 +136,4 @@ from (
     round(percent_rank() over(order by price)::numeric * 100, 2) as per
     from product) x
 where x.product_name='Galaxy Z Fold 3';
-
+```
