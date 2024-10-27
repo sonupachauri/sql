@@ -1,3 +1,4 @@
+```sql 
 /* There are 10 IPL team. write an sql query such that each team play with every other team just once. */
 
 drop table teams;
@@ -28,3 +29,5 @@ with matches as
   
  SELECT m.team_name,o.team_name from matches m 
  join matches o on m.id < o.id
+
+```
