@@ -1,3 +1,4 @@
+```sql
 DROP TABLE source;
 CREATE TABLE source
     (
@@ -36,5 +37,4 @@ UNION
 select t.id, 'New in target' as outputs from source s
 RIGHT JOIN target t on s.id = t.id
 where s.id is NULL
-
-
+```
