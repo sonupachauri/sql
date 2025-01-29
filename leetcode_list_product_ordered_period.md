@@ -1,4 +1,4 @@
-
+```sql
 Create table If Not Exists Products (product_id int, product_name varchar(40), product_category varchar(40))
 Create table If Not Exists Orders (product_id int, order_date date, unit int)
 Truncate table Products
@@ -34,3 +34,5 @@ LEFT JOIN Products AS P
 WHERE DATE_FORMAT(O.order_date,'%Y-%m') ='2020-02'
 GROUP BY O.product_id
 HAVING unit >=100;
+
+```
