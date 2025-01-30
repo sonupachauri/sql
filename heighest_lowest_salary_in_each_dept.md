@@ -5,6 +5,7 @@ or the lowest salary in each department from the employee table.
 
 --Tables Structure:
 
+```sql
 drop table employee;
 create table employee
 ( emp_ID int primary key
@@ -38,8 +39,10 @@ insert into employee values(123, 'Vikram', 'IT', 8000);
 insert into employee values(124, 'Dheeraj', 'IT', 11000);
 
 select * from employee;
+```
 
 -- Solution:
+```sql
 select x.*
 from employee e
 join (select *,
@@ -58,3 +61,4 @@ where 1 = (select count(distinct salary) from Employee e2 where e2.salary > e1.s
 
 # select max(salary) as SecondHighestSalary from Employee
 # where salary < (select max(salary) from Employee)
+```
