@@ -4,6 +4,7 @@ From the login_details table, fetch the users who logged in consecutively 3 or m
 
 --Table Structure:
 
+```sql
 drop table login_details;
 create table login_details(
 login_id int primary key,
@@ -27,9 +28,9 @@ insert into login_details values
 (113, 'James', current_date+6);
 
 select * from login_details;
-
+```
 --Solution:
-
+```sql
 select distinct repeated_names
 from (
 select *,
@@ -38,3 +39,4 @@ and  user_name = lead(user_name,2) over(order by login_id)
 then user_name else null end as repeated_names
 from login_details) x
 where x.repeated_names is not null;
+```
