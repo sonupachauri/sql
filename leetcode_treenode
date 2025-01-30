@@ -78,6 +78,7 @@ Explanation: If there is only one node on the tree, you only need to output its 
 
 # Write your MySQL query statement below
 
+```sql
 select id,
   (case
     when p_id is null then 'Root'
@@ -85,5 +86,5 @@ select id,
     else 'Leaf'
   end )as type
 from Tree
-
+```
 
