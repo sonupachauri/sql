@@ -11,6 +11,7 @@ Table: Tree
 | id          | int  |
 | p_id        | int  |
 +-------------+------+
+
 id is the column with unique values for this table.
 Each row of this table contains information about the id of a node and the id of its parent node in a tree.
 The given structure is always a valid tree.
