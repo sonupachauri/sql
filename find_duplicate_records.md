@@ -4,6 +4,7 @@ Write a SQL query to fetch all the duplicate records from a table.
 
 --Tables Structure:
 
+```sql
 drop table users;
 create table users
 (
@@ -20,9 +21,11 @@ insert into users values
 
 select * from users;
 
+```
 -- Solution 1:
 
 -- Replace ctid with rowid for Oracle, MySQL and Microsoft SQLServer
+```sql
 select *
 from users u
 where u.ctid not in (
@@ -30,10 +33,10 @@ select min(ctid) as ctid
 from users
 group by user_name
 order by ctid);
-
+```
 
 -- Solution 2: Using window function.
-
+```sql
 select user_id, user_name, email
 from (
 select *,
@@ -41,9 +44,11 @@ row_number() over (partition by user_name order by user_id) as rn
 from users u
 order by user_id) x
 where x.rn <> 1;
+```
 
 -- Solution 3: Using window function.
+```sql
 SELECT email FROM users
 GROUP by user_name
 having COUNT(*) > 1
-
+```
