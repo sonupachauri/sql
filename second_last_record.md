@@ -4,6 +4,7 @@ Write a SQL query to fetch the second last record from a employee table.
 
 --Tables Structure:
 
+```sql
 drop table employee;
 create table employee
 ( emp_ID int primary key
@@ -37,11 +38,13 @@ insert into employee values(123, 'Vikram', 'IT', 8000);
 insert into employee values(124, 'Dheeraj', 'IT', 11000);
 
 select * from employee;
-
+```
 -- Solution:
+```sql
 select emp_id, emp_name, dept_name, salary
 from (
 select *,
 row_number() over (order by emp_id desc) as rn
 from employee e) x
 where x.rn = 2;
+```
