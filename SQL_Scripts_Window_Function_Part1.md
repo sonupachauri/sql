@@ -1,4 +1,4 @@
-
+```sql
 drop table employee;
 create table employee
 ( emp_ID int
@@ -96,3 +96,4 @@ select e.*,
 lag(salary) over(partition by dept_name order by emp_id) as prev_empl_sal,
 lead(salary) over(partition by dept_name order by emp_id) as next_empl_sal
 from employee e;
+```
