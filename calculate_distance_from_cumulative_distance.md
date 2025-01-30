@@ -12,6 +12,7 @@ How should I get the table in the form of kms travelled by the car on a given da
 
 
 -->> Sample Dataset:
+```sql
 drop table car_travels;
 create table car_travels
 (
@@ -30,8 +31,10 @@ insert into car_travels values ('Car3', 'Day4', 100);
 
 select * from car_travels;
 
-
+```
 -—>> Solution:
+```sql
 select *
 , cumulative_distance - lag(cumulative_distance, 1, 0) over(partition by cars order by days) as distance_travelled
 from car_travels;
+```
