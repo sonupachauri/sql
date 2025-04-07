@@ -8,3 +8,4 @@
 7. [Window Function Part 2](https://github.com/sonupachauri/sql/blob/main/SQL_Script_Window_Function_Part2.md)
 8. [Highest or Lowest Salary for each Dept](https://github.com/sonupachauri/sql/blob/main/heighest_lowest_salary_in_each_dept.md)
 9. [Rows Columns Interchange](https://github.com/sonupachauri/sql/blob/main/rows_column_interchange.md)
+9. [Users login n+ times in system](https://github.com/sonupachauri/sql/blob/main/login_user_3_more_times.md)
