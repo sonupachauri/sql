@@ -9,3 +9,4 @@
 8. [Highest or Lowest Salary for each Dept](https://github.com/sonupachauri/sql/blob/main/heighest_lowest_salary_in_each_dept.md)
 9. [Rows Columns Interchange](https://github.com/sonupachauri/sql/blob/main/rows_column_interchange.md)
 10. [Users login n+ times in system](https://github.com/sonupachauri/sql/blob/main/login_user_3_more_times.md)
+11. [Employee earning more salary than manager](https://github.com/sonupachauri/sql/blob/main/employee_salary_more_than_manager.md)
