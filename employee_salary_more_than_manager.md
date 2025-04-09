@@ -12,3 +12,4 @@ insert into emp_manager values(	8	,'Ashish',	5000	,2	);
 
 SELECT e1.emp_id,e1.emp_name, e2.salary,e2.emp_name  from emp_manager e1
 join emp_manager e2 on e1.manager_id = e2.emp_id and e1.salary > e2.salary;
+
