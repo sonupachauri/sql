@@ -1,3 +1,5 @@
+https://leetcode.com/problems/second-highest-salary/
+
 ```sql 
 Table: Employee
 
@@ -48,12 +50,13 @@ Output:
 +---------------------+
 
 select ifnull((
-select salary from Employee order by salary desc limit 1,1), null) as  SecondHighestSalary;
+select distinct salary from Employee order by salary desc limit 1,1), null) as  SecondHighestSalary;
 
 select ifnull(
 (select x.salary from 
-  (select salary, row_number() over(order by salary desc) as rn from Employee) x
+  (select  salary, dense_rank() over(partition by salary order by salary desc) as rn from Employee) x
 where x.rn = 2),null) as SecondHighestSalary
+
 
 SELECT 
   (
