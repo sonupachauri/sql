@@ -1,4 +1,4 @@
-
+```sql 
 Table: Person
 
 +-------------+---------+
@@ -24,7 +24,7 @@ Table: Address
 addressId is the primary key (column with unique values) for this table.
 Each row of this table contains information about the city and state of one person with ID = PersonId.
 
-```sql 
+
 Create table If Not Exists Person (personId int, firstName varchar(255), lastName varchar(255))
 Create table If Not Exists Address (addressId int, personId int, city varchar(255), state varchar(255))
 Truncate table Person
