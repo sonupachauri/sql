@@ -55,4 +55,12 @@ select ifnull(
   (select salary, row_number() over(order by salary desc) as rn from Employee) x
 where x.rn = 2),null) as SecondHighestSalary
 
+SELECT 
+  (
+    SELECT DISTINCT salary AS SecondHighestSalary
+    FROM Employee
+    ORDER BY salary DESC
+    LIMIT 1, 1
+  ) AS SecondHighestSalary;
+
 ```
