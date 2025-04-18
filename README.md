@@ -12,3 +12,5 @@
 11. [Employee earning more salary than manager](https://github.com/sonupachauri/sql/blob/main/employee_salary_more_than_manager.md)
 12. [Cross Join data with example](https://github.com/sonupachauri/sql/blob/main/cross_join_with_ecommerce_data_example.md)
 13. [Case sensitivity vs Insensetivity](https://github.com/sonupachauri/sql/blob/main/cross_join_with_ecommerce_data_example.md)
+14. [Combine Two Tables](https://github.com/sonupachauri/sql/blob/main/cross_join_with_ecommerce_data_example.md)
+15. [2nd Heighest salary](https://github.com/sonupachauri/sql/blob/main/leetcode_2nd_heighest_salary.md)
